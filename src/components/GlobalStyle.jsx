@@ -1,9 +1,7 @@
-@import-normalize; /* bring in normalize.css styles */
+import { createGlobalStyle } from 'styled-components';
+import 'modern-normalize';
 
-* {
-  box-sizing: border-box;
-}
-
+export const GlobalStyle = createGlobalStyle`
 h1,
 h2,
 h3,
@@ -11,8 +9,8 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
-}
+    margin: 0;
+    }
 
 ul,
 ol {
@@ -33,3 +31,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+`;

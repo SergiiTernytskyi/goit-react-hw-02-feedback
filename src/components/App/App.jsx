@@ -1,3 +1,4 @@
+import { GlobalStyle } from 'components/GlobalStyle';
 import { Component } from 'react';
 import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
 import { Notification } from '../Notification/Notification';
@@ -34,6 +35,8 @@ export class App extends Component {
 
     return (
       <Container>
+        <GlobalStyle />
+
         <Section title="Please leave a feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}

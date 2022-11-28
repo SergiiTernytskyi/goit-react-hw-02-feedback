@@ -6,14 +6,14 @@ export const StatisticsList = styled.ul`
 `;
 
 export const StatisticsItem = styled.li`
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: ${props => props.theme.fontSizes.l}px;
+  font-weight: ${props => props.theme.fontWeights.semibold};
+  line-height: ${props => props.theme.lineHeights.body};
 
-  color: #728697;
+  color: ${props => props.theme.colors.primaryText};
 
   :not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: ${props => props.theme.space[4]}px;
   }
 `;
 
@@ -22,15 +22,16 @@ export const MessageList = styled.ul`
   align-items: ceter;
   justify-content: center;
   list-style: none;
+  gap: ${props => props.theme.space[5]}px;
 `;
 
 export const Message = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: ${props => props.theme.fontSizes.l}px;
+  font-weight: ${props => props.theme.fontWeights.normal};
+  line-height: ${props => props.theme.lineHeights.body};
   min-width: 100px;
 
   color: ${props => {
@@ -46,11 +47,7 @@ export const Message = styled.li`
     }
   }};
 
-  :not(:last-child) {
-    margin-right: 24px;
-  }
-
   svg {
-    margin-bottom: 8px;
+    margin-bottom: ${props => props.theme.space[3]}px;
   }
 `;

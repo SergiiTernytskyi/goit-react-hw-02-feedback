@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Message = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.15;
+  font-size: ${props => props.theme.fontSizes.m}px;
+  font-weight: ${props => props.theme.fontWeights.normal};
+  line-height: ${props => props.theme.lineHeights.heading};
   text-transform: uppercase;
-  color: #728697;
+  color: ${props => props.theme.colors.primaryText};
 `;
